@@ -4,7 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Root from "./routes/root";
 import ErrorPage from "./routes/error-page";
-import WelcomePage from "./components/WelcomPage";
+import WelcomePage from "./routes/welcome-page";
 import Products from "./routes/products";
 import Profile from "./routes/profile";
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
+        path: "/test-app/index.html",
         element: <WelcomePage />,
       },
       {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: "user",
+        path: "/test-app/user",
         element: <Profile />,
       },
     ],
