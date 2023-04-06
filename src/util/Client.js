@@ -1,5 +1,5 @@
 class Client {
-  static baseEndpoint = "http://localhost:8000";
+  static baseEndpoint = "//zoemhay.com/test-app/api";
   static async getProducts() {
     const endpoint = Client.baseEndpoint + "/products";
     try {
