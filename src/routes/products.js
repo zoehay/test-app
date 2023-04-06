@@ -22,7 +22,7 @@ const Products = () => {
       console.log("fetch");
       let newProducts = await Client.getProducts();
       setProducts(newProducts);
-      console.log("set", products);
+      console.log("set", newProducts);
     }
     fetchData();
   }, []);
@@ -34,14 +34,14 @@ const Products = () => {
   return (
     <>
       <h2>Product</h2>
-      <ProductFeed>{productTiles}</ProductFeed>
-      {/* {products[0] ? (
+      {/* <ProductFeed>{productTiles}</ProductFeed> */}
+      {productTiles ? (
         <>
           <ProductFeed>{productTiles}</ProductFeed>
         </>
       ) : (
         <h2>Loading products</h2>
-      )} */}
+      )}
     </>
   );
 };
